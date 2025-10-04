@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protech IT Services | Ebooks & Online Courses</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #333;
+      background: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #0b5fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0b5fff;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .hero a {
+      background: #0b5fff;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background: #094ed1;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #0b5fff;
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card .info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .product-card a {
+      background: #0b5fff;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .product-card a:hover {
+      background: #094ed1;
+    }
+
+    .about, .contact {
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      width: 100%;
+    }
+
+    .contact button {
+      background: #0b5fff;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #094ed1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #0b5fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Protech IT Services</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Empower Your Future with Knowledge</h1>
+      <p>Explore our ebooks and online courses designed to help you build skills and grow your online business.</p>
+      <a href="#products">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80" alt="Ebook 1">
+        <div class="info">
+          <h3>Mastering Python Programming</h3>
+          <p>Comprehensive ebook to help you learn Python from scratch.</p>
+          <a href="https://selar.co/buy/sample" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22d79b37b23b?auto=format&fit=crop&w=800&q=80" alt="Course 1">
+        <div class="info">
+          <h3>Web Development Bootcamp</h3>
+          <p>Learn how to build responsive and modern websites.</p>
+          <a href=" https://selar.com/78mx24" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Ebook 2">
+        <div class="info">
+          <h3>UI/UX Design Fundamentals</h3>
+          <p>Improve your design thinking and visual communication skills.</p>
+          <a href="https://selar.com/n9759j" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b4?auto=format&fit=crop&w=800&q=80" alt="Affiliate Course">
+        <div class="info">
+          <h3>Affiliate Marketing Masterclass</h3>
+          <p>Learn how to earn passive income promoting top products online.</p>
+          <a href="https://pavexflow.com/a/zwm04/p/w34ik" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Facebook Ad Course">
+        <div class="info">
+          <h3>Facebook Ads Course</h3>
+          <p>Master Facebook ad campaigns and scale your online business.</p>
+          <a href="https://pavexflow.com/a/zwm04/p/9i4jr" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>At Protech IT Services, we help individuals and businesses excel in the digital world through practical ebooks and powerful online courses. Our mission is to make tech and business knowledge accessible to everyone.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Follow us on 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Protech IT Services. All rights reserved.
+  </footer>
+
+</body>
+</html>
